@@ -2,11 +2,15 @@ package com.example.anhvietpham.basic_unit_test.loginusecase
 
 import com.example.anhvietpham.basic_unit_test.loginusecase.authtoken.AuthTokenCache
 import com.example.anhvietpham.basic_unit_test.loginusecase.eventbus.EventBusPoster
+import com.example.anhvietpham.basic_unit_test.loginusecase.eventbus.LoggedInEvent
 import com.example.anhvietpham.basic_unit_test.loginusecase.networking.LoginHttpEndpointSync
+import com.example.anhvietpham.basic_unit_test.loginusecase.networking.NetworkErrorException
 import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.instanceOf
 import org.junit.Assert.assertThat
 import org.junit.Before
 import org.junit.Test
+
 const val USER_NAME = "username"
 const val AUTH_TOKEN = "authToken"
 const val PASSWORD = "password"
@@ -64,11 +68,73 @@ class LoginUseCaseSyncTest{
         SUT.loginSync(USER_NAME, PASSWORD)
         assertThat(authTokenCacheTd.mAuthToken, `is`(""))
     }
+
     // If login succeeds -  login event posted to event bus.
+    @Test
+    fun loginSync_success_loggedInEventPosted() {
+        SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(eventBusPosterTd.mEvent, `is`(instanceOf(LoggedInEvent::class.java)))
+        
+    }
+
     // If login fail - no login event posted.
+    @Test
+    fun loginSync_generalError_noInteractionWithEventBusPoster() {
+        loginHttpEndpointSyncTd.isGeneralError = true
+        SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(eventBusPosterTd.mInteractionCount, `is`(0))
+    }
+
+    @Test
+    fun loginSync_authError_noInteractionWithEventBusPoster() {
+        loginHttpEndpointSyncTd.isAuthError = true
+        SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(eventBusPosterTd.mInteractionCount, `is`(0))
+    }
+
+    @Test
+    fun loginSync_serverError_noInteractionWithEventBusPoster() {
+        loginHttpEndpointSyncTd.isServerError = true
+        SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(eventBusPosterTd.mInteractionCount, `is`(0))
+    }
+
     // If login succeeds - success returned
+    @Test
+    fun loginSync_success_successReturned() {
+        val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.SUCCESS))
+    }
     // If fails -  fail returned
+
+    @Test
+    fun loginSync_serverError_failureReturned() {
+        loginHttpEndpointSyncTd.isServerError = true
+        val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
+    }
+
+    @Test
+    fun loginSync_authError_failureReturned() {
+        loginHttpEndpointSyncTd.isAuthError = true
+        val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
+    }
+
+    @Test
+    fun loginSync_generalError_failureReturned() {
+        loginHttpEndpointSyncTd.isGeneralError = true
+        val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
+    }
+
     // network - network error returned
+    @Test
+    fun loginSync_networkError_networkErrorReturned() {
+        loginHttpEndpointSyncTd.isNetworkError = true
+        val result : LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.NETWORK_ERROR))
+    }
 
     private class LoginHttpEndpointSyncTd : LoginHttpEndpointSync {
         var mUserName: String? = null
@@ -76,6 +142,7 @@ class LoginUseCaseSyncTest{
         var isGeneralError: Boolean = false
         var isAuthError: Boolean = false
         var isServerError: Boolean = false
+        var isNetworkError: Boolean = false
 
         override fun loginSync(usename: String, password: String): LoginHttpEndpointSync.EndpointResult {
             mUserName = usename
@@ -93,6 +160,7 @@ class LoginUseCaseSyncTest{
                     mStatus = LoginHttpEndpointSync.EndpointResultStatus.SERVER_ERROR,
                     mAuthToken = ""
                 )
+                isNetworkError -> throw NetworkErrorException()
                 else -> LoginHttpEndpointSync.EndpointResult(
                     mStatus = LoginHttpEndpointSync.EndpointResultStatus.SUCCESS,
                     mAuthToken = AUTH_TOKEN
@@ -112,8 +180,11 @@ class LoginUseCaseSyncTest{
     }
 
     private class EnventBusPosterTd: EventBusPoster{
+        lateinit var mEvent: Object
+        var mInteractionCount : Int = 0
         override fun postEvent(event: Object) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            mInteractionCount++
+            mEvent = event
         }
     }
 }
