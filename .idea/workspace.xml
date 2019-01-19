@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeSettings">
-    <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
-    </configurations>
+    <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75167292-4fd3-4872-8be2-71acf654aab1" name="Default" comment="">
+    <list default="true" id="fbcd2b9c-109c-4c36-a0df-c9819898c940" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -15,15 +13,44 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/LoggedInEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/LoggedInEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSyncTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSyncTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic-unit-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-unit-test.iml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/apk_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/blame/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/check-manifest/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/checkDebugClasspath/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/compatible_screen_manifest/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/instant_run_merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/javac/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/merged_manifests/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/prebuild/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/processed_res/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/split_list/" />
+    <ignored path="$PROJECT_DIR$/app/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/app/build/kotlin/" />
+    <ignored path="$PROJECT_DIR$/app/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/app/build/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/basic_unit_test$LoginUseCaseSyncTest.ic" NAME="LoginUseCaseSyncTest Coverage Results" MODIFIED="1547881145372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.anhvietpham.basic_unit_test.loginusecase.*</FILTER>
+    </SUITE>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -39,20 +66,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IntervalsOverlapDetectorTest.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginUseCaseSync.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="330">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+              <folding>
+                <element signature="e#62#416#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,11 +81,8 @@
       <file leaf-file-name="LoginUseCaseSyncTest.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSyncTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-              <folding>
-                <element signature="e#62#588#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -82,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -99,8 +117,8 @@
       <file leaf-file-name="LoginHttpEndpointSync.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="120">
+              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -123,26 +141,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interval.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example3/Interval.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
-        <option value="JUnit4 Test Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2495,32 +2494,15 @@
         </entry>
       </map>
     </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example1/PositiveNumberValidatorTest.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example1/PositiveNumberValidator.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example1/PositiveNumberValidatorTest.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example2/StringReverserTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example2/StringReverser.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example2/StringReverserTest.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example3/Interval.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetector.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/LoggedInEvent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/NetworkErrorException.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/authtoken/AuthTokenCache.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSyncTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt" />
       </list>
     </option>
   </component>
@@ -2537,8 +2519,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2565,6 +2545,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2690,25 +2672,6 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Udemy-Git-Hub/unit-testing-in-android-course" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.example.anhvietpham.basic_unit_test.loginusecase" />
-      <recent name="com.example.anhvietpham.basic_unit_test.example3" />
-      <recent name="com.example.anhvietpham.basic_unit_test.example2" />
-      <recent name="com.example.anhvietpham.basic_unit_test.example1" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -2721,43 +2684,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.IntervalsOverlapDetectorTest">
-    <configuration name="IntervalsOverlapDetectorTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Android JUnit.LoginUseCaseSyncTest.loginSync_generalError_failureReturned">
+    <configuration name="LoginUseCaseSyncTest.loginSync_generalError_authTokenNotCached" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.example3.*" />
+          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.loginusecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.example3" />
-      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.example3.IntervalsOverlapDetectorTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="IntervalsOverlapDetectorTest.isOverlap_interval1BeforeInterVal2_falseReturned" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.example3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.example3" />
-      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.example3.IntervalsOverlapDetectorTest" />
-      <option name="METHOD_NAME" value="isOverlap_interval1BeforeInterVal2_falseReturned" />
+      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase.LoginUseCaseSyncTest" />
+      <option name="METHOD_NAME" value="loginSync_generalError_authTokenNotCached" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -2767,20 +2707,24 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="PositiveNumberValidatorTest.test2" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginUseCaseSyncTest.loginSync_generalError_failureReturned" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.example1.*" />
+          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.loginusecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.example1" />
-      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.example1.PositiveNumberValidatorTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase.LoginUseCaseSyncTest" />
+      <option name="METHOD_NAME" value="loginSync_generalError_failureReturned" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -2790,20 +2734,24 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="PositiveNumberValidatorTest.test3" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginUseCaseSyncTest.loginSync_serverError_noInteractionWithEventBusPoster" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.example1.*" />
+          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.loginusecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.example1" />
-      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.example1.PositiveNumberValidatorTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase.LoginUseCaseSyncTest" />
+      <option name="METHOD_NAME" value="loginSync_serverError_noInteractionWithEventBusPoster" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -2813,21 +2761,25 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="StringReverserTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginUseCaseSyncTest.loginSync_success_usernameAndPasswordPassedToEndpoint" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.example2.*" />
+          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.loginusecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.example2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.example2.StringReverserTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase.LoginUseCaseSyncTest" />
+      <option name="METHOD_NAME" value="loginSync_success_usernameAndPasswordPassedToEndpoint" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
@@ -2836,6 +2788,10 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -2909,6 +2865,29 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="LoginUseCaseSyncTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.anhvietpham.basic_unit_test.loginusecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase" />
+      <option name="MAIN_CLASS_NAME" value="com.example.anhvietpham.basic_unit_test.loginusecase.LoginUseCaseSyncTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -2937,19 +2916,19 @@
     </configuration>
     <list>
       <item itemvalue="Android App.app" />
-      <item itemvalue="Android JUnit.PositiveNumberValidatorTest.test2" />
-      <item itemvalue="Android JUnit.PositiveNumberValidatorTest.test3" />
-      <item itemvalue="Android JUnit.StringReverserTest" />
-      <item itemvalue="Android JUnit.IntervalsOverlapDetectorTest.isOverlap_interval1BeforeInterVal2_falseReturned" />
-      <item itemvalue="Android JUnit.IntervalsOverlapDetectorTest" />
+      <item itemvalue="JUnit.LoginUseCaseSyncTest" />
+      <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_success_usernameAndPasswordPassedToEndpoint" />
+      <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_generalError_authTokenNotCached" />
+      <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_serverError_noInteractionWithEventBusPoster" />
+      <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_generalError_failureReturned" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.IntervalsOverlapDetectorTest" />
-        <item itemvalue="Android JUnit.IntervalsOverlapDetectorTest.isOverlap_interval1BeforeInterVal2_falseReturned" />
-        <item itemvalue="Android JUnit.StringReverserTest" />
-        <item itemvalue="Android JUnit.PositiveNumberValidatorTest.test3" />
-        <item itemvalue="Android JUnit.PositiveNumberValidatorTest.test2" />
+        <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_generalError_failureReturned" />
+        <item itemvalue="JUnit.LoginUseCaseSyncTest" />
+        <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_serverError_noInteractionWithEventBusPoster" />
+        <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_generalError_authTokenNotCached" />
+        <item itemvalue="Android JUnit.LoginUseCaseSyncTest.loginSync_success_usernameAndPasswordPassedToEndpoint" />
       </list>
     </recent_temporary>
   </component>
@@ -2958,7 +2937,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="75167292-4fd3-4872-8be2-71acf654aab1" name="Default" comment="" />
+      <changelist id="fbcd2b9c-109c-4c36-a0df-c9819898c940" name="Default" comment="" />
       <created>1547706423171</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -2999,30 +2978,45 @@
       <option name="project" value="LOCAL" />
       <updated>1547744425190</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Full unit test for LoginUseCaseSync.kt">
+      <created>1547868729300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547868729300</updated>
+    </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PositiveNumberValidatorTest_test1 - 2019.01.17 at 13h 56m 24s.xml">
-      <configuration name="PositiveNumberValidatorTest.test1" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest - 2019.01.19 at 13h 50m 39s.xml">
+      <configuration name="LoginUseCaseSyncTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositiveNumberValidatorTest_test2 - 2019.01.17 at 13h 56m 34s.xml">
-      <configuration name="PositiveNumberValidatorTest.test2" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest_loginSync_success_usernameAndPasswordPassedToEndpoint - 2019.01.19 at 13h 51m 20s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_success_usernameAndPasswordPassedToEndpoint" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="PositiveNumberValidatorTest_test3 - 2019.01.17 at 13h 56m 42s.xml">
-      <configuration name="PositiveNumberValidatorTest.test3" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest_loginSync_generalError_authTokenNotCached - 2019.01.19 at 13h 51m 31s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_generalError_authTokenNotCached" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="PositiveNumberValidatorTest_test3 - 2019.01.17 at 13h 57m 08s.xml">
-      <configuration name="PositiveNumberValidatorTest.test3" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest_loginSync_serverError_noInteractionWithEventBusPoster - 2019.01.19 at 13h 56m 20s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_serverError_noInteractionWithEventBusPoster" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="StringReverserTest - 2019.01.17 at 14h 27m 19s.xml">
-      <configuration name="StringReverserTest" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest_loginSync_generalError_failureReturned - 2019.01.19 at 13h 58m 57s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_generalError_failureReturned" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="StringReverserTest - 2019.01.17 at 14h 28m 19s.xml">
-      <configuration name="StringReverserTest" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest - 2019.01.19 at 13h 59m 08s.xml">
+      <configuration name="LoginUseCaseSyncTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntervalsOverlapDetectorTest_isOverlap_interval1BeforeInterVal2_falseReturned - 2019.01.17 at 15h 57m 42s.xml">
-      <configuration name="IntervalsOverlapDetectorTest.isOverlap_interval1BeforeInterVal2_falseReturned" configurationId="AndroidJUnit" />
+    <history-entry file="LoginUseCaseSyncTest_loginSync_generalError_failureReturned - 2019.01.19 at 14h 04m 14s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_generalError_failureReturned" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginUseCaseSyncTest_loginSync_generalError_failureReturned - 2019.01.19 at 14h 05m 07s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_generalError_failureReturned" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginUseCaseSyncTest - 2019.01.19 at 14h 05m 07s.xml">
+      <configuration name="LoginUseCaseSyncTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginUseCaseSyncTest_loginSync_generalError_failureReturned - 2019.01.19 at 14h 05m 20s.xml">
+      <configuration name="LoginUseCaseSyncTest.loginSync_generalError_failureReturned" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -3036,20 +3030,21 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15346535" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.42079207" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.0037821482" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Logcat" order="7" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23676248" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17397882" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32838285" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -3060,6 +3055,32 @@
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32838285" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -3069,9 +3090,32 @@
     <MESSAGE value="Init LoginUseCaseSync()" />
     <MESSAGE value="LoginUseCaseSync() with loginSync_success_usernameAndPasswordPassedToEndpoint" />
     <MESSAGE value="LoginUseCaseSync() with loginSyncError case" />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginUseCaseSync() with loginSyncError case" />
+    <MESSAGE value="Full unit test for LoginUseCaseSync.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full unit test for LoginUseCaseSync.kt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/example3/Interval.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+          <folding>
+            <element signature="e#62#416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -3083,6 +3127,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#62#416#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3139,9 +3186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1872">
           <caret line="84" column="66" selection-start-line="84" selection-start-column="66" selection-end-line="84" selection-end-column="66" />
-          <folding>
-            <element signature="e#62#588#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3334,20 +3378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -3376,20 +3406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/LoggedInEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/authtoken/AuthTokenCache.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -3397,20 +3413,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/LoggedInEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/eventbus/EventBusPoster.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/example3/IntervalsOverlapDetectorTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/ExampleUnitTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/networking/LoginHttpEndpointSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#62#416#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/anhvietpham/basic_unit_test/loginusecase/LoginUseCaseSyncTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-          <folding>
-            <element signature="e#62#588#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>

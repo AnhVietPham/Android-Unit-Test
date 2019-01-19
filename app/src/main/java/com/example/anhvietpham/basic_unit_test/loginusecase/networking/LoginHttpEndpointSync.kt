@@ -3,7 +3,7 @@ package com.example.anhvietpham.basic_unit_test.loginusecase.networking
 interface LoginHttpEndpointSync {
 
     @Throws(NetworkErrorException::class)
-    fun loginSync(usename: String, password: String) : EndpointResult
+    fun loginSync(username: String, password: String) : EndpointResult
 
     enum class EndpointResultStatus {
         SUCCESS,
@@ -12,5 +12,5 @@ interface LoginHttpEndpointSync {
         GENERAL_ERROR
     }
 
-    class EndpointResult(mStatus: EndpointResultStatus, mAuthToken: String)
+    class EndpointResult(val mStatus: EndpointResultStatus,val mAuthToken: String)
 }

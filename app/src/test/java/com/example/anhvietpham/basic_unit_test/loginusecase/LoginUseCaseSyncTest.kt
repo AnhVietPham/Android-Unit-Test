@@ -18,13 +18,13 @@ class LoginUseCaseSyncTest{
     private lateinit var SUT : LoginUseCaseSync
     private lateinit var loginHttpEndpointSyncTd: LoginHttpEndpointSyncTd
     private lateinit var authTokenCacheTd: AuthTokenCacheTd
-    private lateinit var eventBusPosterTd: EnventBusPosterTd
+    private lateinit var eventBusPosterTd: EventBusPosterTd
 
     @Before
     fun setUp() {
         loginHttpEndpointSyncTd = LoginHttpEndpointSyncTd()
         authTokenCacheTd = AuthTokenCacheTd()
-        eventBusPosterTd = EnventBusPosterTd()
+        eventBusPosterTd = EventBusPosterTd()
         SUT = LoginUseCaseSync(
             loginHttpEndpointSyncTd,
             authTokenCacheTd,
@@ -40,7 +40,7 @@ class LoginUseCaseSyncTest{
         assertThat(loginHttpEndpointSyncTd.mPassword, `is`(PASSWORD))
     }
 
-    // If login succeeds - user's autho token must be cached.
+    // If login succeeds - user's auth token must be cached.
     @Test
     fun loginSync_success_authTokenCached() {
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
@@ -144,8 +144,8 @@ class LoginUseCaseSyncTest{
         var isServerError: Boolean = false
         var isNetworkError: Boolean = false
 
-        override fun loginSync(usename: String, password: String): LoginHttpEndpointSync.EndpointResult {
-            mUserName = usename
+        override fun loginSync(username: String, password: String): LoginHttpEndpointSync.EndpointResult {
+            mUserName = username
             mPassword = password
             return when {
                 isGeneralError -> LoginHttpEndpointSync.EndpointResult(
@@ -175,14 +175,14 @@ class LoginUseCaseSyncTest{
             mAuthToken = authtoken
         }
         override fun getAuthToken(): String {
-            return mAuthToken!!
+            return mAuthToken
         }
     }
 
-    private class EnventBusPosterTd: EventBusPoster{
-        lateinit var mEvent: Object
+    private class EventBusPosterTd: EventBusPoster{
+        lateinit var mEvent: LoggedInEvent
         var mInteractionCount : Int = 0
-        override fun postEvent(event: Object) {
+        override fun postEvent(event: LoggedInEvent) {
             mInteractionCount++
             mEvent = event
         }
