@@ -25,6 +25,16 @@ class UserInputValidatorTest{
         assertThat(result,`is`(false))
     }
 
+    @Test
+    fun isValidUserName_validUserName_trueReturned() {
+        val result = SUT.isValidUserName("validUsername")
+        assertThat(result,`is`(true))
+    }
 
+    @Test
+    fun isValidUserName_validUserName_falseReturned() {
+        val result = SUT.isValidUserName("")
+        assertThat(result,`is`(false))
+    }
 
 }
