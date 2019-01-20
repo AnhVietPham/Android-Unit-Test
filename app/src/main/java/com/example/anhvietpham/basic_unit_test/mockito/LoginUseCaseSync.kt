@@ -8,7 +8,7 @@ import com.example.anhvietpham.basic_unit_test.mockito.networking.NetworkErrorEx
 
 class LoginUseCaseSync(
     private val loginHttpEndpointSync: LoginHttpEndpointSync,
-    private val authoToken: AuthTokenCache,
+    private val authToken: AuthTokenCache,
     private val eventBusPoster: EventBusPoster
 ) {
     enum class UseCaseResult {
@@ -25,7 +25,7 @@ class LoginUseCaseSync(
             return UseCaseResult.NETWORK_ERROR
         }
         return if (isSuccessfulEndpointResult(endpointResult = endpointEndpointResult)) {
-            authoToken.cacheAuthToken(endpointEndpointResult.mAuthToken)
+            authToken.cacheAuthToken(endpointEndpointResult.mAuthToken)
             eventBusPoster.postEvent(LoggedInEvent())
             UseCaseResult.SUCCESS
         } else {

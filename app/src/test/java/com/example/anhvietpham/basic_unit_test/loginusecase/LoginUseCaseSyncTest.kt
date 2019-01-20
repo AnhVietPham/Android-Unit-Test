@@ -172,8 +172,8 @@ class LoginUseCaseSyncTest{
 
     private class AuthTokenCacheTd : AuthTokenCache {
         var mAuthToken: String = ""
-        override fun cacheAuthToken(authtoken: String) {
-            mAuthToken = authtoken
+        override fun cacheAuthToken(authToken: String) {
+            mAuthToken = authToken
         }
         override fun getAuthToken(): String {
             return mAuthToken
