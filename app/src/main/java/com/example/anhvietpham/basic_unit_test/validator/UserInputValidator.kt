@@ -1,8 +1,8 @@
 package com.example.anhvietpham.basic_unit_test.validator
 
 class UserInputValidator {
-    fun isValidFullName(fullname: String) : Boolean{
-        return FullNameValidator().isValidFullName(fullName = fullname)
+    fun isValidFullName(fullName: String) : Boolean{
+        return FullNameValidator().isValidFullName(fullName = fullName)
     }
 
     fun isValidUserName(username: String) : Boolean{
