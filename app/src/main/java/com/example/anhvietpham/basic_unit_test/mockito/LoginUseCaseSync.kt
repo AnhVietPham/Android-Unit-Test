@@ -1,4 +1,4 @@
-package com.example.anhvietpham.basic_unit_test.loginusecase
+package com.example.anhvietpham.basic_unit_test.mockito
 
 import com.example.anhvietpham.basic_unit_test.mockito.authtoken.AuthTokenCache
 import com.example.anhvietpham.basic_unit_test.mockito.eventbus.EventBusPoster
@@ -17,7 +17,7 @@ class LoginUseCaseSync(
         NETWORK_ERROR
     }
 
-    fun loginSync(userName: String, password: String) : UseCaseResult{
+    fun loginSync(userName: String, password: String) : UseCaseResult {
         val endpointEndpointResult: LoginHttpEndpointSync.EndpointResult
         try {
             endpointEndpointResult = loginHttpEndpointSync.loginSync(userName, password)

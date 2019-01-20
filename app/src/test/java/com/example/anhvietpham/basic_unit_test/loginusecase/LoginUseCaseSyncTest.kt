@@ -1,10 +1,11 @@
 package com.example.anhvietpham.basic_unit_test.loginusecase
 
-import com.example.anhvietpham.basic_unit_test.loginusecase.authtoken.AuthTokenCache
-import com.example.anhvietpham.basic_unit_test.loginusecase.eventbus.EventBusPoster
-import com.example.anhvietpham.basic_unit_test.loginusecase.eventbus.LoggedInEvent
-import com.example.anhvietpham.basic_unit_test.loginusecase.networking.LoginHttpEndpointSync
-import com.example.anhvietpham.basic_unit_test.loginusecase.networking.NetworkErrorException
+import com.example.anhvietpham.basic_unit_test.mockito.LoginUseCaseSync
+import com.example.anhvietpham.basic_unit_test.mockito.authtoken.AuthTokenCache
+import com.example.anhvietpham.basic_unit_test.mockito.eventbus.EventBusPoster
+import com.example.anhvietpham.basic_unit_test.mockito.eventbus.LoggedInEvent
+import com.example.anhvietpham.basic_unit_test.mockito.networking.LoginHttpEndpointSync
+import com.example.anhvietpham.basic_unit_test.mockito.networking.NetworkErrorException
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.instanceOf
 import org.junit.Assert.assertThat
@@ -179,7 +180,7 @@ class LoginUseCaseSyncTest{
         }
     }
 
-    private class EventBusPosterTd: EventBusPoster{
+    private class EventBusPosterTd: EventBusPoster {
         lateinit var mEvent: LoggedInEvent
         var mInteractionCount : Int = 0
         override fun postEvent(event: LoggedInEvent) {
