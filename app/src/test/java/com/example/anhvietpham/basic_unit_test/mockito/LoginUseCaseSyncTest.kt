@@ -34,12 +34,15 @@ class LoginUseCaseSyncTest{
     // Username and password passed to the endpoint
     @Test
     fun loginSync_success_usernameAndPasswordPassedToEndpoint() {
+        // Arrange
         val argumentCaptor = argumentCaptor<String>()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
         verify(loginHttpEndpointSyncMock, times(1)).loginSync(
             argumentCaptor.capture(),
             argumentCaptor.capture()
         )
+        // Assert
         assertThat(argumentCaptor.firstValue,`is`(USER_NAME))
         assertThat(argumentCaptor.secondValue, `is`(PASSWORD))
     }
@@ -47,8 +50,11 @@ class LoginUseCaseSyncTest{
     // If login succeeds - user's auth token must be cached.
     @Test
     fun loginSync_success_authTokenCached() {
+        // Arrange
         val argumentCaptor = argumentCaptor<String>()
+        // Act
         SUT.loginSync(userName = USER_NAME,password = PASSWORD)
+        // Assert
         verify(authTokenCacheMock).cacheAuthToken(authToken = argumentCaptor.capture())
         assertThat(argumentCaptor.firstValue, `is`(AUTH_TOKEN))
     }
@@ -56,30 +62,42 @@ class LoginUseCaseSyncTest{
     // If login fails - auth token is not change.
     @Test
     fun loginSync_generalError_authTokenNotCached() {
+        // Arrange
         generalError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(authTokenCacheMock)
     }
 
     @Test
     fun loginSync_authError_authTokenNotCached() {
+        // Arrange
         authError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(authTokenCacheMock)
     }
 
     @Test
     fun loginSync_serverError_authTokenNotCached() {
+        // Arrange
         serverError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(authTokenCacheMock)
     }
 
     // If login succeeds -  login event posted to event bus.
     @Test
     fun loginSync_success_loggedInEventPosted() {
+        // Arrange
         val argumentCaptor = argumentCaptor<LoggedInEvent>()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verify(eventBusPosterMock).postEvent(argumentCaptor.capture())
         assertThat(argumentCaptor.firstValue, `is`(instanceOf(LoggedInEvent::class.java)))
     }
@@ -87,58 +105,82 @@ class LoginUseCaseSyncTest{
     // If login fail - no login event posted.
     @Test
     fun loginSync_generalError_noInteractionWithEventBusPoster() {
+        // Arrange
         generalError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(eventBusPosterMock)
     }
 
     @Test
     fun loginSync_authError_noInteractionWithEventBusPoster() {
+        // Arrange
         authError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(eventBusPosterMock)
     }
 
     @Test
     fun loginSync_serverError_noInteractionWithEventBusPoster() {
+        // Arrange
         serverError()
+        // Act
         SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         verifyNoMoreInteractions(eventBusPosterMock)
     }
 
     // If login succeeds - success returned
     @Test
     fun loginSync_success_successReturned() {
+        // Arrange
+        // Act
         val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.SUCCESS))
     }
     // If fails -  fail returned
     @Test
     fun loginSync_serverError_failureReturned() {
+        // Arrange
         serverError()
+        // Act
         val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
     }
 
     @Test
     fun loginSync_authError_failureReturned() {
+        // Arrange
         authError()
+        // Act
         val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
     }
 
     @Test
     fun loginSync_generalError_failureReturned() {
+        // Arrange
         generalError()
+        // Act
         val result: LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.FAILURE))
     }
 
     // network - network error returned
     @Test
     fun loginSync_networkError_networkErrorReturned() {
+        // Arrange
         networkError()
+        // Act
         val result : LoginUseCaseSync.UseCaseResult = SUT.loginSync(userName = USER_NAME, password = PASSWORD)
+        // Assert
         assertThat(result, `is`(LoginUseCaseSync.UseCaseResult.NETWORK_ERROR))
     }
 
