@@ -4,8 +4,7 @@ import com.example.anhvietpham.basic_unit_test.testdrivendevelopment.pingserver.
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import org.hamcrest.CoreMatchers.`is`
-import org.junit.Assert
-import org.junit.Assert.*
+import org.junit.Assert.assertThat
 import org.junit.Before
 import org.junit.Test
 
@@ -36,6 +35,20 @@ class PingServerSyncUseCaseTest{
         val result = SUT.pingServerSync()
         // Assert
         assertThat(result,`is`(PingServerSyncUseCase.UseCaseResult.FAILURE))
+    }
+
+    @Test
+    fun pingServerSync_networkError_failureReturned() {
+        // Arrange
+        networkError()
+        // Act
+        val result = SUT.pingServerSync()
+        // Assert
+        assertThat(result,`is`(PingServerSyncUseCase.UseCaseResult.FAILURE))
+    }
+
+    private fun networkError() {
+        whenever(mPingServerHttpEndPointSync.pingServerSync()).thenReturn(PingServerHttpEndPointSync.EndPointResult.NETWORK_ERROR)
     }
 
     private fun generalError() {
