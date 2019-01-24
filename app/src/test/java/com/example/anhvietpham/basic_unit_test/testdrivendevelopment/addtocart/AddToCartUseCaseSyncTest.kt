@@ -7,6 +7,7 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert
+import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentCaptor
@@ -33,10 +34,19 @@ class AddToCartUseCaseSyncTest{
         SUT.addToCartSync(OFFERID, AMOUNT)
         // Assert
         verify(mAddToCartHttpEndpointSyncMock).addToCartSync(ac.capture())
-        Assert.assertThat(ac.firstValue.mOfferId, `is`(OFFERID))
-        Assert.assertThat(ac.firstValue.mAmount, `is`(AMOUNT))
+        assertThat(ac.firstValue.mOfferId, `is`(OFFERID))
+        assertThat(ac.firstValue.mAmount, `is`(AMOUNT))
     }
+
     // endpoint success - success returned
+    @Test
+    fun addToCart_success_successReturned() {
+        // Arrange
+        // Act
+        val result = SUT.addToCartSync(OFFERID, AMOUNT)
+        // Assert
+        assertThat(result, `is`(AddToCartUseCaseSync.UseCaseResult.SUCCESS))
+    }
     // endpoint auth error - failure returned
     // endpoint general error - failure returned
     // network exception - network error returned
