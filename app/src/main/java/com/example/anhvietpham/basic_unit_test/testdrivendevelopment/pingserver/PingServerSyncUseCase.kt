@@ -1,12 +1,20 @@
 package com.example.anhvietpham.basic_unit_test.testdrivendevelopment.pingserver
 
-class PingServerSyncUseCase {
+import com.example.anhvietpham.basic_unit_test.testdrivendevelopment.pingserver.network.PingServerHttpEndPointSync
+
+class PingServerSyncUseCase(private val mPingServerHttpEndPointSync: PingServerHttpEndPointSync) {
 
     fun pingServerSync() : UseCaseResult {
-        return UseCaseResult.SUCCESS
+        val result = mPingServerHttpEndPointSync.pingServerSync()
+        return if (result == PingServerHttpEndPointSync.EndPointResult.GENERAL_ERROR) {
+            UseCaseResult.FAILURE
+        } else {
+            UseCaseResult.SUCCESS
+        }
     }
 
     enum class UseCaseResult{
-        SUCCESS
+        SUCCESS,
+        FAILURE
     }
 }

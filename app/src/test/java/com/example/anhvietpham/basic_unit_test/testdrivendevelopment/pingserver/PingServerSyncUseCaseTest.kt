@@ -15,7 +15,7 @@ class PingServerSyncUseCaseTest{
 
     @Before
     fun setup(){
-        SUT = PingServerSyncUseCase()
+        SUT = PingServerSyncUseCase(mPingServerHttpEndPointSync)
         success()
     }
 
@@ -26,6 +26,20 @@ class PingServerSyncUseCaseTest{
         val result = SUT.pingServerSync()
         // Assert
         assertThat(result,`is`(PingServerSyncUseCase.UseCaseResult.SUCCESS))
+    }
+
+    @Test
+    fun pingServerSync_generalError_failureReturned() {
+        // Arrange
+        generalError()
+        // Act
+        val result = SUT.pingServerSync()
+        // Assert
+        assertThat(result,`is`(PingServerSyncUseCase.UseCaseResult.FAILURE))
+    }
+
+    private fun generalError() {
+        whenever(mPingServerHttpEndPointSync.pingServerSync()).thenReturn(PingServerHttpEndPointSync.EndPointResult.GENERAL_ERROR)
     }
 
     private fun success() {
