@@ -20,7 +20,9 @@ class AddToCartUseCaseSyncTest{
 
     @Before
     fun setup(){
-        SUT = AddToCartUseCaseSync(addToCartHttpEndpointSync = mAddToCartHttpEndpointSyncMock)
+        SUT = AddToCartUseCaseSync(
+            addToCartHttpEndpointSync = mAddToCartHttpEndpointSyncMock
+        )
         success()
     }
 
@@ -30,7 +32,10 @@ class AddToCartUseCaseSyncTest{
         // Arrange
         val ac = argumentCaptor<CartItemScheme>()
         // Act
-        SUT.addToCartSync(OFFERID, AMOUNT)
+        SUT.addToCartSync(
+            OFFERID,
+            AMOUNT
+        )
         // Assert
         verify(mAddToCartHttpEndpointSyncMock).addToCartSync(ac.capture())
         assertThat(ac.firstValue.mOfferId, `is`(OFFERID))
@@ -42,7 +47,10 @@ class AddToCartUseCaseSyncTest{
     fun addToCart_success_successReturned() {
         // Arrange
         // Act
-        val result = SUT.addToCartSync(OFFERID, AMOUNT)
+        val result = SUT.addToCartSync(
+            OFFERID,
+            AMOUNT
+        )
         // Assert
         assertThat(result, `is`(AddToCartUseCaseSync.UseCaseResult.SUCCESS))
     }
@@ -53,7 +61,10 @@ class AddToCartUseCaseSyncTest{
         // Arrange
         authError()
         // Act
-        val result = SUT.addToCartSync(OFFERID, AMOUNT)
+        val result = SUT.addToCartSync(
+            OFFERID,
+            AMOUNT
+        )
         // Assert
         assertThat(result, `is`(AddToCartUseCaseSync.UseCaseResult.FAILURE))
     }
@@ -64,7 +75,10 @@ class AddToCartUseCaseSyncTest{
         // Arrange
         generalError()
         // Act
-        val result = SUT.addToCartSync(OFFERID, AMOUNT)
+        val result = SUT.addToCartSync(
+            OFFERID,
+            AMOUNT
+        )
         // Assert
         assertThat(result, `is`(AddToCartUseCaseSync.UseCaseResult.FAILURE))
     }
@@ -75,7 +89,10 @@ class AddToCartUseCaseSyncTest{
         // Arrange
         networkError()
         // Act
-        val result = SUT.addToCartSync(OFFERID, AMOUNT)
+        val result = SUT.addToCartSync(
+            OFFERID,
+            AMOUNT
+        )
         // Assert
         assertThat(result, `is`(AddToCartUseCaseSync.UseCaseResult.NETWORK_ERROR))
     }
