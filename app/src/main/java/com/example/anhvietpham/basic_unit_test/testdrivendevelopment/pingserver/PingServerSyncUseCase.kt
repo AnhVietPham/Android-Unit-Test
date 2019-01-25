@@ -6,12 +6,10 @@ class PingServerSyncUseCase(private val mPingServerHttpEndPointSync: PingServerH
 
     fun pingServerSync(): UseCaseResult {
         val result = mPingServerHttpEndPointSync.pingServerSync()
-        return if (result == PingServerHttpEndPointSync.EndPointResult.GENERAL_ERROR) {
-            UseCaseResult.FAILURE
-        } else if (result == PingServerHttpEndPointSync.EndPointResult.NETWORK_ERROR) {
-            UseCaseResult.FAILURE
-        } else {
-            UseCaseResult.SUCCESS
+        return when (result) {
+            PingServerHttpEndPointSync.EndPointResult.GENERAL_ERROR -> UseCaseResult.FAILURE
+            PingServerHttpEndPointSync.EndPointResult.NETWORK_ERROR -> UseCaseResult.FAILURE
+            else -> UseCaseResult.SUCCESS
         }
     }
 
