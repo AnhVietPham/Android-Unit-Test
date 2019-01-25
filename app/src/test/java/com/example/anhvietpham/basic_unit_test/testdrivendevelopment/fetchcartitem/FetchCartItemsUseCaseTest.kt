@@ -44,7 +44,6 @@ class FetchCartItemsUseCaseTest{
     @Test
     fun fetchCartItem_success_observerNotifiedWithCorrectData() {
         // Arrange
-
         // Act
         SUT.registerListener(mListenerMock1)
         SUT.registerListener(mListenerMock2)
@@ -60,15 +59,67 @@ class FetchCartItemsUseCaseTest{
     }
 
     // Success - unsubscribed observers not notified
+    @Test
+    fun fetchCartItems_success_unsubscribedObserverNotNotified() {
+        // Arrange
+        // Act
+        SUT.registerListener(mListenerMock1)
+        SUT.registerListener(mListenerMock2)
+        SUT.unRegisterListener(mListenerMock2)
+        SUT.fetchCartItemsAndNotify(LIMIT)
+        // Assert
+        verify(mListenerMock1).onCartItemsFetched(any())
+        verifyNoMoreInteractions(mListenerMock2)
+    }
     // General error - observer notified of failure
-    // Network error - observer notified of failure
+    @Test
+    fun fetchCartItem_generalError_observerNotifiedOfFailure() {
+        // Arrange
+        generalError()
+        // Act
+        SUT.registerListener(mListenerMock1)
+        SUT.registerListener(mListenerMock2)
+        SUT.fetchCartItemsAndNotify(LIMIT)
+        // Assert
+        verify(mListenerMock1).onCartItemsFetchedFailed()
+        verify(mListenerMock2).onCartItemsFetchedFailed()
+    }
 
+    // Network error - observer notified of failure
+    @Test
+    fun fetchCartItem_networkError_observerNotifiedOfFailure() {
+        // Arrange
+        networkError()
+        // Act
+        SUT.registerListener(mListenerMock1)
+        SUT.registerListener(mListenerMock2)
+        SUT.fetchCartItemsAndNotify(LIMIT)
+        // Assert
+        verify(mListenerMock1).onCartItemsFetchedFailed()
+        verify(mListenerMock2).onCartItemsFetchedFailed()
+    }
 
     private fun success() {
         doAnswer {
             val args = it.arguments
             val callback = args[1] as GetCartItemsHttpEndpoint.CallBack
             callback.onGetCartItemSuccessed(getCartItemSchemes())
+        }.`when`(mGetCartItemsHttpEndpoint).getCartItems(anyInt(), any())
+    }
+
+    private fun generalError() {
+        doAnswer {
+            val args = it.arguments
+            val callback = args[1] as GetCartItemsHttpEndpoint.CallBack
+            callback.onGetCartItemsFailed(GetCartItemsHttpEndpoint.FailReason.GENERAL_ERROR)
+        }.`when`(mGetCartItemsHttpEndpoint).getCartItems(anyInt(), any())
+    }
+
+    private fun networkError() {
+        doAnswer {
+            val args = it.arguments
+            val callback = args[1] as GetCartItemsHttpEndpoint.CallBack
+            callback.onGetCartItemsFailed(GetCartItemsHttpEndpoint.FailReason.NETWORK_ERROR)
         }.`when`(mGetCartItemsHttpEndpoint).getCartItems(anyInt(), any())
     }
 

@@ -8,6 +8,7 @@ class FetchCartItemsUseCase(private val getCartItemsHttpEndpoint: GetCartItemsHt
 ) {
     interface Listener {
         fun onCartItemsFetched(capture: List<CartItemSchema>)
+        fun onCartItemsFetchedFailed()
     }
 
     fun fetchCartItemsAndNotify(limit: Int) {
@@ -19,7 +20,12 @@ class FetchCartItemsUseCase(private val getCartItemsHttpEndpoint: GetCartItemsHt
             }
 
             override fun onGetCartItemsFailed(failReason: GetCartItemsHttpEndpoint.FailReason) {
-
+                if (failReason == GetCartItemsHttpEndpoint.FailReason.GENERAL_ERROR ||
+                    failReason == GetCartItemsHttpEndpoint.FailReason.NETWORK_ERROR){
+                    mListeners.forEach { listener ->
+                        listener.onCartItemsFetchedFailed()
+                    }
+                }
             }
         })
     }
@@ -37,8 +43,12 @@ class FetchCartItemsUseCase(private val getCartItemsHttpEndpoint: GetCartItemsHt
         return cartItemSchemas
     }
 
-    fun registerListener(mListenerMock: Listener) {
-        mListeners.add(mListenerMock)
+    fun registerListener(mListener: Listener) {
+        mListeners.add(mListener)
+    }
+
+    fun unRegisterListener(mListener: Listener) {
+        mListeners.remove(mListener)
     }
 
 }
